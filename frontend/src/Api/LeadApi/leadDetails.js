@@ -1,6 +1,7 @@
 export const leadDetailsApi = async (id) => {
     try {
-        const url = `http://localhost:7060/api/v1/lead/lead-detail/${id}`;
+        // const url = `http://localhost:7060/api/v1/lead/lead-detail/${id}`;
+        const url = `https://crm-dashboard-backend.onrender.com/api/v1/lead/lead-detail/${id}`;
         const response = await fetch(url, {
             method: "GET",
             credentials: "include"

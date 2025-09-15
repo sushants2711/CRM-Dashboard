@@ -1,6 +1,7 @@
 export const createLead = async (data) => {
     try {
-        const url = "http://localhost:7060/api/v1/lead/add";
+        // const url = "http://localhost:7060/api/v1/lead/add";
+        const url = "https://crm-dashboard-backend.onrender.com/api/v1/lead/add";
         const response = await fetch(url, {
             method: "POST",
             credentials: "include",

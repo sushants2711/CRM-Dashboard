@@ -1,6 +1,7 @@
 export const getAllSalesAgentApi = async () => {
     try {
-        const url = `http://localhost:7060/api/v1/sales/get`;
+        // const url = `http://localhost:7060/api/v1/sales/get`;
+        const url = `https://crm-dashboard-backend.onrender.com/api/v1/sales/get`;
         const response = await fetch(url, {
             method: "GET",
             credentials: "include"

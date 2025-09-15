@@ -9,6 +9,7 @@ import { CreateLead } from './pages/leads/CreateLead';
 import { LeadDetails } from './pages/leads/LeadDetails';
 import { CreateSales } from './pages/Sales/CreateSales';
 import { ReportPipeline } from './pages/Reports/ReportPipeline';
+import { PageNotFound } from './pages/PageNotFound/PageNotFound';
 
 
 function App() {
@@ -17,13 +18,14 @@ function App() {
     <Routes>
       <Route path='/' element = { <Dashboard /> } />
       <Route path='/leads' element = { <Leads /> } />
-      <Route path='/lead-detail/:id' element={ <LeadDetails /> } />
+      <Route path='/lead-detail/:id' element ={ <LeadDetails /> } />
       <Route path='/agents' element = { <Agents /> } />
       <Route path='/sales' element = { <Sales /> } />
       <Route path='/reports-closed' element = { <Reports /> } />
       <Route path='/reports-pipeline' element = { <ReportPipeline /> } />
       <Route path='/create-lead' element = { <CreateLead /> } />
-      <Route path='/create-sale' element={ <CreateSales /> } />
+      <Route path='/create-sale' element = { <CreateSales /> } />
+      <Route path='*' element = { <PageNotFound /> } />
     </Routes>
     </>
   )

@@ -1,12 +1,14 @@
 export const getAllleadDashboard = async (status) => {
     try {
-        let url = `http://localhost:7060/api/v1/lead/get`;
+        // let url = `http://localhost:7060/api/v1/lead/get`;
+        let url = "https://crm-dashboard-backend.onrender.com/api/v1/lead/get";
 
         if(status) {
-            url = `http://localhost:7060/api/v1/lead/get?status=${status}`;
+            // url = `http://localhost:7060/api/v1/lead/get?status=${status}`;
+            url = `https://crm-dashboard-backend.onrender.com/api/v1/lead/get?status=${status}`;
         }
 
-        console.log(url);
+        // console.log(url);
 
         const response = await fetch(url, {
             method: "GET",
