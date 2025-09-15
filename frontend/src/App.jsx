@@ -9,8 +9,7 @@ import { CreateLead } from './pages/leads/CreateLead';
 import { LeadDetails } from './pages/leads/LeadDetails';
 import { CreateSales } from './pages/Sales/CreateSales';
 import { ReportPipeline } from './pages/Reports/ReportPipeline';
-import { PageNotFound } from './pages/PageNotFound/PageNotFound';
-
+import { PageNotFound } from './pages/PageNotFounds/PageNotFound';
 
 function App() {
   return (
