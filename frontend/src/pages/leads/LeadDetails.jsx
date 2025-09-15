@@ -36,11 +36,11 @@ export const LeadDetails = () => {
       if (success) {
         // handleSuccess(message);
         setShowData(data);
-      } else if(!success){
+      } else if (!success) {
         // handleError(message);
         setShowError(message);
         setShowData({});
-      }else {
+      } else {
         handleError(error);
         setShowError(error);
         setShowData({});
@@ -58,6 +58,7 @@ export const LeadDetails = () => {
       const { success, message, error, data } = result;
       if (success) {
         // handleSuccess(message);
+        setCommentError(null)
         setShowComment(data);
       } else {
         // handleError(message || error);
@@ -127,20 +128,20 @@ export const LeadDetails = () => {
 
   const handleAddComment = async (e) => {
     e.preventDefault();
- try {
-    const { author, commentText } = formData;
+    try {
+      const { author, commentText } = formData;
 
-    if (!author || !commentText) {
-      handleError("All fields are required to add a new Comment.")
-      return;
-    };
+      if (!author || !commentText) {
+        handleError("All fields are required to add a new Comment.")
+        return;
+      };
 
-    if (commentText.length < 5) {
-      handleError("Comment Text length must be greater than 5.");
-      return;
-    };
+      if (commentText.length < 5) {
+        handleError("Comment Text length must be greater than 5.");
+        return;
+      };
 
-   
+
       // console.log("decode", decode);
       // console.log("fromData", formData);
       const result = await createComment(decode, formData);
@@ -168,7 +169,7 @@ export const LeadDetails = () => {
   return (
     <Layout>
       <Helmet>
-         <title>Lead-Details Dashboard | CRM</title>
+        <title>Lead-Details Dashboard | CRM</title>
         <meta
           name="description"
           content={`Get the Lead Details. Best Lead Information.`}
