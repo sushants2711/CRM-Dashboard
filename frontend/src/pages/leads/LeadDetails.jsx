@@ -148,6 +148,7 @@ export const LeadDetails = () => {
       const { success, message, error, data } = result;
       // console.log(success);
       if (success) {
+        fetchComment();
         handleSuccess(message);
         setFormData({
           author: "",
