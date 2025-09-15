@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import "./Sidebar.css";
+// import "./Sidebar.css";
 import { ArrowRight } from 'lucide-react';
 
 export const Sidebar = () => {
@@ -8,6 +8,33 @@ export const Sidebar = () => {
   const navigate = useNavigate();
   return (
     <>
+
+    <style>{`
+        /* Base nav link */
+        .nav-link {
+          color: #495057;
+          font-weight: 500;
+          padding: 10px 15px;
+          border-radius: 6px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        /* Hover effect */
+        .nav-link:hover {
+          color: #0d6efd; /* Bootstrap primary */
+          background-color: #dee1e5; /* light gray-blue */
+        }
+
+        /* Active (selected) link */
+        .nav-link.active {
+          color: #fff !important;
+          background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+          font-weight: 600;
+          border-radius: 6px;
+          box-shadow: 0 2px 6px rgba(13, 110, 253, 0.25);
+        }
+      `}</style>
+
       {/* Toggle Button for Mobile */}
       <div className="d-md-none bg-light p-2 border-bottom">
         <button
