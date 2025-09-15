@@ -26,7 +26,8 @@ export const getAllleadDashboard = async (status) => {
 // getAllLead.js
 export const getAlllead = async (filters = {}) => {
   try {
-    let url = `http://localhost:7060/api/v1/lead/get`;
+    // let url = `http://localhost:7060/api/v1/lead/get`;
+    let url = `https://crm-dashboard-backend.onrender.com/api/v1/lead/get`;
 
     // Convert filters object to query string dynamically
     const queryParams = new URLSearchParams();
@@ -46,7 +47,7 @@ export const getAlllead = async (filters = {}) => {
         "Content-Type": "application/json",
       },
     });
-console.log(url)
+// console.log(url)
     return await response.json();
   } catch (error) {
     // console.error("Error fetching leads:", error);
