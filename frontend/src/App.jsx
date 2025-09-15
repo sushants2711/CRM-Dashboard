@@ -9,7 +9,7 @@ import { CreateLead } from './pages/leads/CreateLead';
 import { LeadDetails } from './pages/leads/LeadDetails';
 import { CreateSales } from './pages/Sales/CreateSales';
 import { ReportPipeline } from './pages/Reports/ReportPipeline';
-import { PageNotFound } from './pages/PageNotFounds/PageNotFound';
+// import { PageNotFound } from './pages/PageNotFounds/PageNotFound';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <Route path='/reports-pipeline' element = { <ReportPipeline /> } />
       <Route path='/create-lead' element = { <CreateLead /> } />
       <Route path='/create-sale' element = { <CreateSales /> } />
-      <Route path='*' element = { <PageNotFound /> } />
+      {/* <Route path='*' element = { <PageNotFound /> } /> */}
     </Routes>
     </>
   )
