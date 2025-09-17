@@ -28,15 +28,15 @@ export const LeadContextProvider = ({ children }) => {
             const { success, message, error, data } = result;
 
             if (success) {
-                handleSuccess(message);
+                // handleSuccess(message);
                 setDisplayData(data);
             }
             else if (!success) {
-                handleError(message)
+                // handleError(message)
                 setDisplayData([])
             }
             else {
-                handleError(error)
+                // handleError(error)
                 setDisplayData([])
             };
         }

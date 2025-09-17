@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Layout } from "../../components/Layout/Layout";
-import { Pencil } from "lucide-react";
+import { Pencil, Pointer } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { allLeadContext } from "../../Context/LeadContext/LeadAllContext";
 import { Helmet } from "react-helmet";
@@ -139,8 +139,8 @@ export const Dashboard = () => {
               {displayData?.length > 0 ? (
                 displayData.map((lead) => (
                   <div key={lead._id} className="col-12 col-md-6 col-lg-4 mb-3">
-                    <div className="card shadow-sm border-0" onClick={() => handleClickToDetails(lead._id)}>
-                      <div className="card-body">
+                    <div className="card shadow-sm border-0 " onClick={() => handleClickToDetails(lead._id)}>
+                      <div className="card-body" style={{ cursor: "Pointer"}}>
                         <h5 className="fw-bold">{lead.name}</h5>
                         <span
                           className={`badge ${getStatusBadgeClass(

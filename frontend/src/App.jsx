@@ -10,6 +10,8 @@ import { LeadDetails } from './pages/leads/LeadDetails';
 import { CreateSales } from './pages/Sales/CreateSales';
 import { ReportPipeline } from './pages/Reports/ReportPipeline';
 import { PageNotFound } from './pages/PageNotFounds/PageNotFound';
+import { UpdateLead } from './pages/leads/UpdateLead';
+import { SettingLeadSales } from './pages/Setting/SettingLeadSales';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <Route path='/reports-pipeline' element = { <ReportPipeline /> } />
       <Route path='/create-lead' element = { <CreateLead /> } />
       <Route path='/create-sale' element = { <CreateSales /> } />
+      <Route path='/update-lead/:id' element = { <UpdateLead /> } />
+      <Route path='/settings' element = { <SettingLeadSales /> } /> 
       <Route path='*' element = { <PageNotFound /> } />
     </Routes>
     </>

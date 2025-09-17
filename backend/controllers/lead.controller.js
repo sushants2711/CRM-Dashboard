@@ -166,7 +166,7 @@ export const updateLeadController = async (req, res) => {
     try {
         const { id } = req.params;
 
-        const { status, salesAgent, tags, timeToClose, priority } = req.body;
+        const { status, salesAgent, tags, timeToClose, priority, name, source } = req.body;
 
         if (!id) {
             return res
@@ -209,6 +209,8 @@ export const updateLeadController = async (req, res) => {
         const closedAtValue = status === "Closed" ? new Date() : null
 
         const updateData = {
+            name: name || leadExist.name,
+            source: source || leadExist.source,
             status: status || leadExist.status,
             salesAgent: salesAgent || leadExist.salesAgent,
             tags: tags || leadExist.tags,

@@ -35,14 +35,14 @@ export const CreateLead = () => {
         // handleSuccess(message);
         setSales(data);
       } else if (!success) {
-        handleError(message);
+        // handleError(message);
         setSales([]);
       } else {
-        handleError(error);
+        // handleError(error);
         setSales([]);
       }
     } catch (error) {
-      handleError(error);
+      // handleError(error);
       setSales([]);
     }
   };

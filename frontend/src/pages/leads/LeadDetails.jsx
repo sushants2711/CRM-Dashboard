@@ -9,6 +9,7 @@ import { getAllSalesAgentApi } from "../../Api/SalesApi/getAllSalesAgent";
 import { createComment } from "../../Api/commentApi/createComment";
 import { ToastContainer } from "react-toastify";
 import { Helmet } from "react-helmet";
+import { Pencil } from 'lucide-react';
 
 export const LeadDetails = () => {
   const [showData, setShowData] = useState({});
@@ -41,7 +42,7 @@ export const LeadDetails = () => {
         setShowError(message);
         setShowData({});
       } else {
-        handleError(error);
+        // handleError(error);
         setShowError(error);
         setShowData({});
       }
@@ -166,6 +167,14 @@ export const LeadDetails = () => {
     };
   };
 
+  const handleUpdateLeadDetails = async (id) => {
+    if(id) {
+      const decode = btoa(id)
+      navigate(`/update-lead/${decode}`)
+    }
+    
+  }
+
   return (
     <Layout>
       <Helmet>
@@ -200,6 +209,9 @@ export const LeadDetails = () => {
                 <div className="card-body p-4">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <h4 className="fw-bold text-primary">{showData.name}</h4>
+                   <div>
+                     <Pencil onClick={() => handleUpdateLeadDetails(showData._id)}/>
+                   </div>
                   </div>
 
                   <p>

@@ -70,11 +70,14 @@ export const updateLeadMiddleware = async (req, res, next) => {
 
     try {
         const schema = joi.object({
+            name: joi.string().min(2).max(55).trim().optional().empty().allow(""),
             status: joi.string().trim().valid('New', 'Contacted', 'Qualified', 'Proposal Sent', 'Closed').optional().empty().allow(""),
+            source: joi.string().trim().valid('Website', 'Referral', 'Cold Call', 'Advertisement', 'Email', 'Other').optional().empty().allow(""),
             salesAgent: joi.string().min(24).max(24).trim().optional().empty().allow(""),
             tags: joi.array().items(joi.string().trim().optional().empty().allow("")),
             timeToClose: joi.number().greater(0).positive().optional().empty().allow(""),
             priority: joi.string().trim().valid("High", "Medium", "Low").optional().empty().allow(""),
+            closedAt: joi.date().optional().empty().allow("")
         });
 
         const { error } = schema.validate(req.body);

@@ -94,11 +94,11 @@ export const Sidebar = () => {
               Reports Pipeline
             </NavLink>
           </li>
-          {/* <li className="nav-item mt-2">
+          <li className="nav-item mt-2">
             <NavLink to="/settings" className="nav-link">
               Settings
             </NavLink>
-          </li> */}
+          </li>
         </ul>
       </nav>
 
@@ -163,11 +163,11 @@ export const Sidebar = () => {
                 Reports Pipeline
               </NavLink>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <NavLink to="/settings" className="nav-link">
                 Settings
               </NavLink>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>

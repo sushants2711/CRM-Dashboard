@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet'
 export const Leads = () => {
 
   const [sales, setSales] = useState([]);
+  const [salesError, setSalesError] = useState(null);
 
   const [tableData, setTableData] = useState([]);
   const [tableError, setTableError] = useState(null);
